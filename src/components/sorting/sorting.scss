@@ -1,0 +1,34 @@
+@import 'src/shared_styles/colors.scss';
+
+.sorting {
+  display: flex;
+
+  &__fields {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+  }
+
+  &__controls-wrapper {
+    display: flex;
+  }
+
+  &__control {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  &__field {
+    &_active {
+      border-bottom: 1px solid $black-color;
+    }
+  }
+
+  &__direction {
+    &_active {
+      border-bottom: 1px solid $black-color;
+    }
+  }
+}

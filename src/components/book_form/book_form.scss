@@ -1,0 +1,23 @@
+@import 'src/shared_styles/colors';
+
+.book-form {
+  &__btns-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+
+  &__button {
+    font-size: 16px;
+  }
+
+  &__submit {
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  &__cancel {
+    padding: 10px;
+    background-color: $red-color;
+  }
+}

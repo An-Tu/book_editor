@@ -1,0 +1,107 @@
+@import 'src/shared_styles/colors.scss';
+@import 'src/shared_styles/dimensions.scss';
+
+.book-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  box-shadow: 0 0 1px $light-gray;
+  border-radius: 10px;
+  transition: .3s;
+
+  &:hover {
+    box-shadow: 0 3px 12px $black-color;
+
+    & .book-item__button {
+      opacity: .3;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+    border: none;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+
+    &:focus {
+      opacity: 1 !important;
+    }
+
+    &::before,
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: calc(50% - 0.5px);
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $black-color;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__img {
+    margin-right: 15px;
+    width: 220px;
+    height: 340px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__text-wrapper:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $black-color;
+
+    &_theme_bold {
+      font-weight: 500;
+      margin-right: 5px;
+    }
+  }
+
+  &__authors-list {
+    list-style: none;
+    padding-left: 20px;
+    max-height: 90px;
+    overflow: auto;
+  }
+
+  &__author:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &__lastname {
+    margin-left: 5px;
+  }
+
+}
+
+@media screen and (max-width:$max-device-width) {
+  .book-item {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,9 @@
+.page-list-layout {
+  margin: 15px 20px 0 20px;
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}

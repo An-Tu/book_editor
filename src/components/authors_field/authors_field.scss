@@ -1,0 +1,48 @@
+.authors-field {
+  display: grid;
+  grid-template-columns: 130px 300px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__authors {
+    position: relative;
+  }
+
+  &__label {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__authors-fields-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-fields {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  &__authors-btns-wrapper {
+    position: absolute;
+    right: -70px;
+    top: 2px;
+  }
+
+  &__author-btn {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__author-btn:not(:last-child) {
+    margin-right: 5px;
+  }
+}

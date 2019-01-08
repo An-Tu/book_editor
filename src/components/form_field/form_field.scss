@@ -1,0 +1,40 @@
+@import 'src/shared_styles/colors';
+
+.form-field {
+  display: grid;
+  grid-template-columns: 130px 300px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__field {
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+
+    &_invalid {
+      border: 2px solid $red-color;
+    }
+  }
+
+  &__error {
+    margin-top: 5px;
+    color: $red-color;
+  }
+
+  &__field-error {
+    grid-column: 2 / 3;
+  }
+
+}

@@ -1,0 +1,22 @@
+@import 'src/shared_styles/colors';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $main-theme-color;
+  box-shadow: 0 1px 10px -2px $black-color;
+  align-items: center;
+  padding: 15px;
+
+  &__text {
+    margin: 0;
+    color: $black-color;
+    font-weight: 500;
+    font-size: 28px;
+  }
+
+  &__link {
+    text-decoration: none;
+
+  }
+}

@@ -1,0 +1,17 @@
+@import 'src/shared_styles/colors';
+
+.button {
+  border: none;
+  background-color: rgba($color: $light-gray, $alpha: .1);
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    box-shadow: 0 1px 10px -2px $black-color;
+  }
+
+  &:disabled {
+    opacity: .3;
+    pointer-events: none;
+  }
+}

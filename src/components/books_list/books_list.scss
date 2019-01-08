@@ -1,0 +1,17 @@
+@import 'src/shared_styles/dimensions.scss';
+
+.books-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, 600px);
+  justify-content: center;
+}
+
+@media screen and (max-width:$max-device-width) {
+  .books-list {
+    grid-template-columns: 1fr;
+  }
+}
